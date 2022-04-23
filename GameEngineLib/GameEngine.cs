@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace life
+namespace GameEngineLib
 {
     public class GameEngine
     {
@@ -76,10 +76,10 @@ namespace life
         public bool[,] GetCurrentGeneration()
         {
             bool[,] res = new bool[cols, rows];
-            for (int x = 0; x < cols; x++) 
+            for (int x = 0; x < cols; x++)
             {
-                for (int y = 0; y < rows; y++) 
-                { 
+                for (int y = 0; y < rows; y++)
+                {
                     res[x, y] = field[x, y];
                 }
             }
@@ -94,7 +94,7 @@ namespace life
         private void UptdateCell(int x, int y, bool state)
         {
             if (ValidateCellPosition(x, y))
-            { 
+            {
                 field[x, y] = state;
             }
         }
